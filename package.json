@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "browserify ./src/ts/main.ts -p [ tsify --noImplicitAny ] > ./dist/js/main.js", 
+    "watch": "watchify ./src/ts/main.ts -p [ tsify --noImplicitAny ] -o ./dist/js/main.js"
+  },
   "author": "Armin Bartnik <armin.bartnik@gmail.com>",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
-    "@types/chrome": "0.0.106"
-  }
+  "devDependencies": {
+    "@types/chrome": "0.0.106",
+    "browserify": "^16.5.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.8.3",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {}
 }

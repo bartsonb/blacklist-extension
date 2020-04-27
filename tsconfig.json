@@ -6,7 +6,7 @@
         "target": "ES5",
         "lib": ["dom", "es5", "ES7", "es2015"],
         "outDir": "dist/js",
-        "rootDir": "src/js",
+        "rootDir": "src/ts",
         "watch": true
     }
 }
