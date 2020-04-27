@@ -1,10 +1,126 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <style>
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('../fonts/Ubuntu-R.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: #f8f8f8;
+            min-width: 300px;
+            padding: 10px;
+            font-size: 100%;
+        }
+
+        header {
+            padding-bottom: 10px;
+        }
+
+        header>p {
+            font-size: 0.8em;
+        }
+
+        form {
+            flex-direction: row;
+        }
+
+        form>* {
+            width: 100%;
+            padding: 10px;
+            border: solid 3px #ccc;
+            border-radius: 3px 3px 3px 3px;
+            transition: all 0.3s ease-in-out;
+            outline: none;
+        }
+
+        form>*:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        form>textarea,
+        form>input {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        form>textarea:hover {
+            border-color: #888;
+        }
+
+        form>textarea:focus {
+            border-color: #3466d6;
+        }
+
+        form>input {
+            background: #3466d6;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        form>input:hover {
+            border-color: transparent;
+            background: #2b56b3;
+        }
+
+        .message {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1.2em;
+            transition: all 0.3s ease-in-out;
+            backdrop-filter: blur(2px);
+        }
+
+        .message>p {
+            transition: all 0.7s ease-in-out;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="message">
+        <p class="message__title">Saved</p>
+    </div>
+
+    <header>
+        <h1>Blacklist</h1>
+        <p>Enter urls below seperated by a linebreak to block those sites.</p>
+    </header>
+
+    <form>
+        <textarea name="urls" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Save">
+    </form>
+
+
+    <script src="../js/popup.js"></script>
 </body>
+
 </html>

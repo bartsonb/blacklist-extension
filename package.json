@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify ./src/ts/main.ts -p [ tsify --noImplicitAny ] > ./dist/js/main.js", 
-    "watch": "watchify ./src/ts/main.ts -p [ tsify --noImplicitAny ] -o ./dist/js/main.js"
+    "watch-main": "watchify ./src/ts/main.ts -p [ tsify --noImplicitAny ] -o ./dist/js/main.js",
+    "watch-popup": "watchify ./src/ts/popup.ts -p [ tsify --noImplicitAny ] -o ./dist/js/popup.js",
+    "dev": "concurrently 'npm:watch-*'"
   },
   "author": "Armin Bartnik <armin.bartnik@gmail.com>",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "@types/chrome": "0.0.106",
     "browserify": "^16.5.1",
     "tsify": "^4.0.1",
+    "concurrently": "^5.2.0",
     "typescript": "^3.8.3",
     "watchify": "^3.11.1"
   },

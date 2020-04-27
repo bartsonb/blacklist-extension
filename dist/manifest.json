@@ -7,7 +7,7 @@
         "tabs", 
         "storage"
     ],
-    "page_action": {
+    "browser_action": {
         "default_popup": "html/popup.html"
     },
     "background": {
