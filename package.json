@@ -1,0 +1,13 @@
+{
+  "name": "block-site-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Armin Bartnik <armin.bartnik@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@types/chrome": "0.0.106"
+  }
+}

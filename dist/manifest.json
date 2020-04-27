@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Block Site",
+    "description": "A simple website blacklist.",
+    "version": "1.0.0",
+    "permissions": [
+        "tabs", 
+        "storage"
+    ],
+    "background": {
+        "scripts": ["js/main.js"],
+        "persistent": true
+    }
+}
