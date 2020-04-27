@@ -27,12 +27,6 @@ const onStorageChange = (
     }
 }
 
-chrome.storage.sync.remove(['storageBlacklist']);
-
-chrome.storage.sync.set({
-    storageBlacklist: ['reddit.com/r/pathofexile']
-});
-
 // Initial loading of stored blacklist
 chrome.storage.sync.get(['storageBlacklist'], ({ storageBlacklist }) => {
     blacklist.setUrls(storageBlacklist);
